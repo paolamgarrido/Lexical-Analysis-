@@ -89,6 +89,7 @@ This function call initiates the parsing process for the input list, for example
 The output will resemble the following:
 
 `[0,1,2]: Accepted`
+
 true .
 
 ### Second Implementation
@@ -132,8 +133,8 @@ run_tests.
 
 The output will resemble the following:
 
-[1,1,1]: Rejected
-[2,2,0]: Accepted
+`[1,1,1]: Rejected`
+`[2,2,0]: Accepted`
 
 ### Regular Expression
 The file test_regex.py contains all the cases tested for the Regular Expression. To run the program in the terminal follow the instructions below: 
