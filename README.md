@@ -61,3 +61,8 @@ After the regular expression was defined without any limitations, we explored it
 
 Then, we moved to larger subexpressions that explored the possible combinations in order to demonstrate the original expression. This resulted in our final automaton, shown in the diagram below:
 ![image](https://github.com/paolamgarrido/Lexical-Analysis-/assets/111533069/65f8377e-4ac4-408b-87ee-d486da071970)
+
+## References
+Sipser, M. (2013). Introduction to the Theory of Computation. En SIGACT news (Vol. 3, pp. 35-37, 64-66). Cengage Learning. http://debracollege.dspaces.org/bitstream/123456789/671/1/Introduction%20to%20the%20Theory%20of%20Computation_2013%20Sipser.pdf
+
+GeeksforGeeks. (2021). Python Regex Lookahead. https://www.geeksforgeeks.org/python-regex-lookahead/
