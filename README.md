@@ -113,6 +113,8 @@ The input string '012' conforms to the language's syntax.
 Enter a string composed of 0s, 1s, and 2s: exit
 
 ## Tests
+
+### DFA
 The file test_automata.pl contains all the cases tested for the DFA. To run the program in the terminal follow the instructions below: 
 
 **Initiate Prolog:**
@@ -131,8 +133,7 @@ The output will resemble the following:
 [1,1,1]: Rejected
 [2,2,0]: Accepted
 
-
-
+### Regular Expression
 The file test_regex.py contains all the cases tested for the Regular Expression. To run the program in the terminal follow the instructions below: 
 
 **Run file:**
