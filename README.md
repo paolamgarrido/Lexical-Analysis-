@@ -191,6 +191,15 @@ In conclusion, as demonstrated by the principle of mathematical induction, the t
 
 ### Conclusion
 
+After analyzing the previous implementations, we can conclude that both Regular Expressions and DFA solutions are viable options.
+
+Regular Expressions offer a compact and efficient way to define patterns and constraints, especially for straightforward patterns like the one we worked with. Additionally, most programming languages provide built-in support for Regular Expressions, streamlining the coding process. However, as patterns become more complex, modifying Regular Expressions can be challenging and may lead to performance issues, making them difficult to maintain.
+
+On the other hand, automata provide a structured approach to defining state transitions and constraints, offering flexibility to handle a wider range of patterns and constraints, including more complex rules. In many cases, automata can offer better performance compared to Regular Expressions, particularly for larger input sizes or more complex patterns. Nevertheless, implementing finite automata requires explicitly defining states, transitions, and acceptance criteria, which may require more implementation effort.
+
+Considering the simplicity of the constraints and patterns described in our project, I believe Regular Expressions are the more optimal solution. However, if more complex constraints or patterns are to be implemented in the future, opting for DFA implementation would be preferable.
+
+
 ## References
 Sipser, M. (2013). Introduction to the Theory of Computation. En SIGACT news (Vol. 3, pp. 35-37, 64-66). Cengage Learning. http://debracollege.dspaces.org/bitstream/123456789/671/1/Introduction%20to%20the%20Theory%20of%20Computation_2013%20Sipser.pdf
 
