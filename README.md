@@ -183,11 +183,11 @@ In conclusion, despite the constant time complexity of the base cases and initia
 
 On the other hand, the time complexity of our Regular Expression program in Python can be broken down as follows:
 
-- The first step of checking the length of the input string takes constant time, O(1), since it's a simple lookup operation.
+- The first step for checking the length of the input string takes constant time O(1), since it's a simple lookup operation.
 
-- Iterating through each character in the input string takes linear time with respect to the length of the input string, O(n).
+- Meanwhile, iterating through each character in the input string takes linear time with respect to the length of the input string O(n).
 
-- Meanwhile, checking for prohibited sequences, since the number of prohibited sequences is fixed, has constant time complexity, O(1).
+- Finally, checking for constraints, since the number of prohibited sequences is fixed, has constant time complexity O(1).
 
 Now, let’s assume that for an input string of length k, T(k) = O(k), k is a non-negative integer. Therefore, the overall time complexity for an input string of length k + 1 is expressed as O(1) + O(k) + O(1) = O(k + 1).
 
@@ -197,11 +197,11 @@ In conclusion, as demonstrated by the principle of mathematical induction, the t
 
 After analyzing the previous implementations, we can conclude that both Regular Expressions and DFA solutions are viable options.
 
-Regular Expressions offer a compact and efficient way to define patterns and constraints, especially for straightforward patterns like the one we worked with. Additionally, most programming languages provide built-in support for Regular Expressions, streamlining the coding process. However, as patterns become more complex, modifying Regular Expressions can be challenging and may lead to performance issues, making them difficult to maintain.
+Regular Expressions offer a compact way to define patterns and constraints, especially for straightforward patterns like the one we worked with. Additionally, most programming languages provide built-in support for Regular Expressions, streamlining the coding process. However, as patterns become more complex, modifying Regular Expressions can be challenging and may lead to performance issues, making them difficult to maintain.
 
 On the other hand, automata provide a structured approach to defining state transitions and constraints, offering flexibility to handle a wider range of patterns and constraints, including more complex rules. In many cases, automata can offer better performance compared to Regular Expressions, particularly for larger input sizes or more complex patterns. Nevertheless, implementing finite automata requires explicitly defining states, transitions, and acceptance criteria, which may require more implementation effort.
 
-Considering the simplicity of the constraints and patterns described in our project, I believe Regular Expressions are the more optimal solution. However, if more complex constraints or patterns are to be implemented in the future, opting for DFA implementation would be preferable.
+Considering the simplicity of the constraints and patterns described in our project, I believe the Regular Expressions is the more optimal solution. However, if more complex constraints or patterns are to be implemented in the future, opting for DFA implementation would be preferable.
 
 
 ## References
