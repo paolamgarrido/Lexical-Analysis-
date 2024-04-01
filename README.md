@@ -1,5 +1,6 @@
-# Description
+# E1 Implementation of Lexical Analysis
 
+## Description
 When it comes to computational methods, the ability to comprehend and analyze languages is fundamental. In this evidence, we will delve into the development of a lexical analysis parser designed to accurately detect a specific language. The language in focus encompasses all possible combinations of the digits 0, 1, and 2, but it must adhere to a set of constraints, prohibiting certain sequences: '111', '222', '210', '221100', '110', and '000'. Therefore, recognizing patterns within languages and ensuring both efficient parsing and processing are crucial aspects of this understanding.
 
 To tackle the problem effectively, we chose to employ the concept of Deterministic Finite Automata (DFA), a mathematical model used to recognize languages. A DFA comprises five objects:
@@ -17,3 +18,46 @@ Moreover, we will utilize Regular Expressions, a powerful notation method that u
 Once our models are complete, we will implement the DFA using Prolog, while also testing the Regular Expression with Python. This allows us to evaluate and compare various approaches, considering elements such as time and pattern complexity, until an optimal solution is chosen.
 
 Ultimately, the implementation process will include a set of documented tests to demonstrate that the algorithm works as intended and correctly solves the problem. By combining theoretical concepts with practical application, this evidence serves as proof of the power of computational methods in language analysis.
+
+## Models
+In this section, we will discuss the two primary models utilized in our language analysis: Deterministic Finite Automata (DFA) and Regular Expression. Both models form the foundation of our approach, offering unique advantages in representing and parsing language patterns.
+
+### Regular Expression 
+Initially, the regular expression was identified taking into account the language constraints and possible combinations: 
+
+(?!.*111|.*222|.*210|.*221100|.*110|.*000)[012]+
+
+Let's break it down to understand how it represents our language pattern:
+
+(**?!**.*111|.*222|.*210|.*221100|.*110|.*000)
+
+The `?!` in a regular expression represents a negative lookahead assertion, ensuring that the string doesn’t contain a certain pattern immediately ahead. (GeeksforGeeks, 2021)
+
+(?!.*111|.*222|.*210|.*221100|.*110|.*000)
+
+Meanwhile, the `.*` inside each lookahead assertion separated by a `|`, indicates in this case that any sequence of characters before the specified prohibited sequences is allowed. 
+
+ [012]+
+
+The last part of the regular expression permits any combination of the characters '012', as indicated by the square brackets denoting a character set. The `+` ensures that there is at least one occurrence of any character within the set.
+
+Therefore, the regular expression ensures that the language allows all possible combinations of '012' with the exception of the prohibited sequences '111', '222', '210', '221100', '110', or '000'. If any of these previous sequences are found, the assertion fails, and the regular expression match will not proceed.
+
+Note: In addition, in order to test the correctness of the regular expression, first the built-in model for Regular Expressions in python was imported as you can see in the file regex_python.py. Then the file combinations.pdf, that contains all possible base case combinations of '012' was tested as well as the test cases from the implementation section. All tests turned out to be successful. To run the program in the terminal follow the instructions below: 
+
+**Run file:**
+python regex_python.py
+
+**Enter input:**
+Enter a string composed of 0s, 1s, and 2s: 012
+The input string '012' conforms to the language's syntax.
+
+**To exit the program write ‘exit’:**
+Enter a string composed of 0s, 1s, and 2s: exit
+
+### DFA 
+After the regular expression was defined without any limitations, we explored its equivalent DFA. In order to build it, first of all the five objects that compose a deterministic model were identified. Then to begin constructing the diagram, the build up started from the smallest subexpressions as recommended by Michael Sipser, in this case taking as references the constraints: 
+![image](https://github.com/paolamgarrido/Lexical-Analysis-/assets/111533069/090fb5c1-9239-4b46-a44b-f392d807d56d)
+
+Then, we moved to larger subexpressions that explored the possible combinations in order to demonstrate the original expression. This resulted in our final automaton, shown in the diagram below:
+![image](https://github.com/paolamgarrido/Lexical-Analysis-/assets/111533069/65f8377e-4ac4-408b-87ee-d486da071970)
