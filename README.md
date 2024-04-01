@@ -149,6 +149,10 @@ Ran 3 tests in 0.001s
 OK
 
 
+## Analysis
+
+
+
 ## References
 Sipser, M. (2013). Introduction to the Theory of Computation. En SIGACT news (Vol. 3, pp. 35-37, 64-66). Cengage Learning. http://debracollege.dspaces.org/bitstream/123456789/671/1/Introduction%20to%20the%20Theory%20of%20Computation_2013%20Sipser.pdf
 
