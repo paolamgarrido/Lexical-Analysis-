@@ -139,7 +139,7 @@ The file test_regex.py contains all the cases tested for the Regular Expression.
 **Run file:**
 python test_regex.py
 
-The output will resemble the following indicating all test are successful:
+The output will resemble the following indicating all tests are successful:
 
 
 ...
