@@ -134,6 +134,8 @@ run_tests.
 The output will resemble the following:
 
 `[1,1,1]: Rejected`
+
+
 `[2,2,0]: Accepted`
 
 ### Regular Expression
