@@ -118,9 +118,11 @@ Enter a string composed of 0s, 1s, and 2s: exit
 The file test_automata.pl contains all the cases tested for the DFA. To run the program in the terminal follow the instructions below: 
 
 **Initiate Prolog:**
+
 swipl
 
 **Load file:**
+
 ["test_automata"].
 true.
 
@@ -137,6 +139,7 @@ The output will resemble the following:
 The file test_regex.py contains all the cases tested for the Regular Expression. To run the program in the terminal follow the instructions below: 
 
 **Run file:**
+
 python test_regex.py
 
 The output will resemble the following indicating all tests are successful:
@@ -172,7 +175,21 @@ The time complexity of the `parse_list` predicate in our Prolog code depends on 
 
 In conclusion, despite the constant time complexity of the base cases and initialization, the recursive case dominates the overall time complexity, resulting in a linear time complexity of O(n).
 
+### Regular Expression
 
+On the other hand, the time complexity of our Regular Expression program in Python can be broken down as follows:
+
+- The first step of checking the length of the input string takes constant time, O(1), since it's a simple lookup operation.
+
+- Iterating through each character in the input string takes linear time with respect to the length of the input string, O(n).
+
+- Meanwhile, checking for prohibited sequences, since the number of prohibited sequences is fixed, has constant time complexity, O(1).
+
+Now, let’s assume that for an input string of length k, T(k) = O(k), k is a non-negative integer. Therefore, the overall time complexity for an input string of length k + 1 is expressed as O(1) + O(k) + O(1) = O(k + 1).
+
+In conclusion, as demonstrated by the principle of mathematical induction, the time complexity of the code for an input string of length n is O(n).
+
+### Conclusion
 
 ## References
 Sipser, M. (2013). Introduction to the Theory of Computation. En SIGACT news (Vol. 3, pp. 35-37, 64-66). Cengage Learning. http://debracollege.dspaces.org/bitstream/123456789/671/1/Introduction%20to%20the%20Theory%20of%20Computation_2013%20Sipser.pdf
