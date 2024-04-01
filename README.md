@@ -88,7 +88,7 @@ This function call initiates the parsing process for the input list, for example
 
 The output will resemble the following:
 
-[0,1,2]: Accepted
+`[0,1,2]: Accepted`
 true .
 
 ### Second Implementation
