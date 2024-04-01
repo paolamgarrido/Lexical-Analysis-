@@ -125,6 +125,7 @@ swipl
 **Load file:**
 
 ["test_automata"].
+
 true.
 
 **Execute Function :**
