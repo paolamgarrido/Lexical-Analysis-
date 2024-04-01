@@ -1,0 +1,96 @@
+% Author: Paola María Garrido Montes
+% Date: March 31, 2024
+% Project: Final DFA Prolog 
+% Purpose of the project: Lexical analysis parser using 
+% a DFA, which can detect the chosen language.
+
+% Define initial state.
+start_state(a).
+
+% Define transitions.
+transition(a, b, 2).
+transition(a, g, 1).
+transition(a, j, 0).
+
+transition(b, c, 2).
+transition(b, e, 1).
+transition(b, j, 0).
+
+transition(c, d, 2).
+transition(c, e, 1).
+transition(c, j, 0).
+
+transition(d, d, 2).
+transition(d, d, 1).
+transition(d, d, 0).
+
+transition(e, b, 2).
+transition(e, h, 1).
+transition(e, f, 0).
+
+transition(f, f, 2).
+transition(f, f, 1).
+transition(f, f, 0).
+
+transition(g, b, 2).
+transition(g, h, 1).
+transition(g, j, 0).
+
+transition(h, b, 2).
+transition(h, i, 1).
+transition(h, i, 0).
+
+transition(i, i, 2).
+transition(i, i, 1).
+transition(i, i, 0).
+
+transition(j, b, 2).
+transition(j, g, 1).
+transition(j, k, 0).
+
+transition(k, b, 2).
+transition(k, g, 1).
+transition(k, l, 0).
+
+transition(l, l, 2).
+transition(l, l, 1).
+transition(l, l, 0).
+
+
+% Define accepting states.
+accepting_state(b).
+accepting_state(c).
+accepting_state(e).
+accepting_state(g).
+accepting_state(h).
+accepting_state(j).
+accepting_state(k).
+
+% Predicate to parse the input list.
+% This predicate initiates the parsing process by asserting the initial state 
+% and calling the internal predicate to parse the input list.
+parse_list(InputList) :-
+    start_state(Start),
+    write(InputList),
+    parse_list(Start, InputList).
+
+% Base case 1: Input list is empty, and the current state is an accepting state.
+% This rule succeeds if the input list is empty and the current state is an accepting 
+% state, printing 'Accepted' as a result.
+parse_list(State, []) :-
+    accepting_state(State),
+    write(': Accepted'), nl.
+
+% Base case 2: Input list is empty, but the current state is not an accepting state.
+% This rule succeeds if the input list is empty and the current state is not an accepting 
+% state, printing 'Rejected' as a result.
+parse_list(State, []) :-
+    \+ accepting_state(State),
+    write(': Rejected'), nl.
+
+% Recursive case: Process the input list.
+% This rule recursively processes the input list character by character, determining the
+% next state based on transitions defined in the automaton.
+parse_list(State, [Input|Rest]) :-
+    transition(State, NextState, Input),
+    parse_list(NextState, Rest).
