@@ -91,6 +91,7 @@ The output will resemble the following:
 [0,1,2]: Accepted
 true .
 
+### Second Implementation
 After successfully implementing the DFA in Prolog, I became curious about exploring the Regular Expression approach. Although the DFA provides an efficient way to recognize the language patterns, I wanted to compare it with the regex implementation to evaluate its simplicity and effectiveness. 
 
 The regex implementation can be found in the regex.py file.  To run the program in the terminal follow the instructions below: 
