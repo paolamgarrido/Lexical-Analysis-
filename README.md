@@ -46,9 +46,11 @@ Therefore, the regular expression ensures that the language allows all possible 
 Note: In addition, in order to test the correctness of the regular expression, first the built-in model for Regular Expressions in python was imported as you can see in the file regex_python.py. Then the file combinations.pdf, that contains all possible base case combinations of '012' was tested as well as the test cases from the implementation section. All tests turned out to be successful. To run the program in the terminal follow the instructions below: 
 
 **Run file:**
+
 python regex_python.py
 
 **Enter input:**
+
 Enter a string composed of 0s, 1s, and 2s: 012
 
 The output will resemble the following:
@@ -56,6 +58,7 @@ The output will resemble the following:
 The input string '012' conforms to the language's syntax.
 
 **To exit the program write ‘exit’:**
+
 Enter a string composed of 0s, 1s, and 2s: exit
 
 ### DFA 
@@ -69,9 +72,11 @@ Then, we moved to larger subexpressions that explored the possible combinations 
 For the lexical analysis parser implementation, the first choice was using prolog to code the automata as seen in the automata.pl file. To run the program in the terminal follow the instructions below: 
 
 **Initiate Prolog:**
+
 swipl
 
 **Load file:**
+
 ["automata"].
 true.
 
@@ -91,9 +96,11 @@ After successfully implementing the DFA in Prolog, I became curious about explor
 The regex implementation can be found in the regex.py file.  To run the program in the terminal follow the instructions below: 
 
 **Run file:**
+
 python regex.py
 
 **Enter input:**
+
 Enter a string composed of 0s, 1s, and 2s: 012
 
 The output will resemble the following:
@@ -101,6 +108,7 @@ The output will resemble the following:
 The input string '012' conforms to the language's syntax.
 
 **To exit the program write ‘exit’:**
+
 Enter a string composed of 0s, 1s, and 2s: exit
 
 
