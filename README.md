@@ -50,6 +50,9 @@ python regex_python.py
 
 **Enter input:**
 Enter a string composed of 0s, 1s, and 2s: 012
+
+The output will resemble the following:
+
 The input string '012' conforms to the language's syntax.
 
 **To exit the program write ‘exit’:**
@@ -61,6 +64,45 @@ After the regular expression was defined without any limitations, we explored it
 
 Then, we moved to larger subexpressions that explored the possible combinations in order to demonstrate the original expression. This resulted in our final automaton, shown in the diagram below:
 ![image](https://github.com/paolamgarrido/Lexical-Analysis-/assets/111533069/65f8377e-4ac4-408b-87ee-d486da071970)
+
+## Implementation
+For the lexical analysis parser implementation, the first choice was using prolog to code the automata as seen in the automata.pl file. To run the program in the terminal follow the instructions below: 
+
+**Initiate Prolog:**
+swipl
+
+**Load file:**
+["automata"].
+true.
+
+**Execute Function :**
+
+parse_list([0,1,2]).
+
+This function call initiates the parsing process for the input list `[0,1,2]`. The program then evaluates the input based on the rules defined in the automata and outputs whether the input string is accepted or rejected based on the language constraints.
+
+The output will resemble the following:
+
+[0,1,2]: Accepted
+true .
+
+After successfully implementing the DFA in Prolog, I became curious about exploring the Regular Expression approach. Although the DFA provides an efficient way to recognize the language patterns, I wanted to compare it with the regex implementation to evaluate its simplicity and effectiveness. 
+
+The regex implementation can be found in the regex.py file.  To run the program in the terminal follow the instructions below: 
+
+**Run file:**
+python regex.py
+
+**Enter input:**
+Enter a string composed of 0s, 1s, and 2s: 012
+
+The output will resemble the following:
+
+The input string '012' conforms to the language's syntax.
+
+**To exit the program write ‘exit’:**
+Enter a string composed of 0s, 1s, and 2s: exit
+
 
 ## References
 Sipser, M. (2013). Introduction to the Theory of Computation. En SIGACT news (Vol. 3, pp. 35-37, 64-66). Cengage Learning. http://debracollege.dspaces.org/bitstream/123456789/671/1/Introduction%20to%20the%20Theory%20of%20Computation_2013%20Sipser.pdf
