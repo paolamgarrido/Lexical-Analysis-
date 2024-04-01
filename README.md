@@ -84,7 +84,7 @@ true.
 
 parse_list([your input list]).
 
-This function call initiates the parsing process for the input list, for example `[0,1,2]`. The program then evaluates the input based on the rules defined in the automata and outputs whether the input string is accepted or rejected based on the language constraints.
+This function call initiates the parsing process for the input list, for example `[0,1,2]`. The program then evaluates the input according to the rules defined in the automata and outputs whether the input string is accepted or rejected based on the language constraints.
 
 The output will resemble the following:
 
