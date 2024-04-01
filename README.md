@@ -163,7 +163,7 @@ The time complexity of the `parse_list` predicate in our Prolog code depends on 
 
 - **Initialization:** During the initialization of our Prolog code, where we assert the initial state and input list, the time complexity is constant O(1).
 
-- **Base Cases:** The base cases, where the input list is empty (`parse_list(State, [])`), also has a constant time complexity O(1). This is because checking the current state and printing a message are simple operations.
+- **Base Cases:** The base cases, where the input list is empty (`parse_list(State, [])`), also have constant time complexity O(1). This is because checking the current state and printing a message are simple operations.
 
 - **Recursive Case:** In the recursive case (`parse_list(State, [Input|Rest])`), we transition from one state to another based on the input character and recursively process the rest of the input list. Each transition lookup (`transition(State, NextState, Input)`) has constant time complexity O(1), as Prolog predicates often use efficient data structures for lookups. However, the recursive call contributes to the overall time complexity, since it depends on the lenght of the input list, which can be expressed as (n-1). Therefore, the total time complexity for processing an input list with \( n \) elements can be expressed as:
 
