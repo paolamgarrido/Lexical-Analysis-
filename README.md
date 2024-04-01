@@ -92,9 +92,9 @@ The output will resemble the following:
 true .
 
 ### Second Implementation
-After successfully implementing the DFA in Prolog, I became curious about exploring the Regular Expression approach. Although the DFA provides an efficient way to recognize the language patterns, I wanted to compare it with the regex implementation to evaluate its simplicity and effectiveness. 
+After successfully implementing the DFA in Prolog, I became curious about exploring the Regular Expression approach. Although the DFA provides an efficient way to recognize the language patterns, I wanted to compare it with the regex implementation to evaluate its effectiveness. 
 
-The regex implementation can be found in the regex.py file.  To run the program in the terminal follow the instructions below: 
+The regex implementation can be found in the regex.py file. To run the program in the terminal follow the instructions below: 
 
 **Run file:**
 
@@ -113,6 +113,40 @@ The input string '012' conforms to the language's syntax.
 Enter a string composed of 0s, 1s, and 2s: exit
 
 ## Tests
+The file test_automata.pl contains all the cases tested for the DFA. To run the program in the terminal follow the instructions below: 
+
+**Initiate Prolog:**
+swipl
+
+**Load file:**
+["test_automata"].
+true.
+
+**Execute Function :**
+
+run_tests.
+
+The output will resemble the following:
+
+[1,1,1]: Rejected
+[2,2,0]: Accepted
+
+
+
+The file test_regex.py contains all the cases tested for the Regular Expression. To run the program in the terminal follow the instructions below: 
+
+**Run file:**
+python test_regex.py
+
+The output will resemble the following indicating all test are successful:
+
+
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+
 
 ## References
 Sipser, M. (2013). Introduction to the Theory of Computation. En SIGACT news (Vol. 3, pp. 35-37, 64-66). Cengage Learning. http://debracollege.dspaces.org/bitstream/123456789/671/1/Introduction%20to%20the%20Theory%20of%20Computation_2013%20Sipser.pdf
