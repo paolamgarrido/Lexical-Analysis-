@@ -1,7 +1,7 @@
 # E1 Implementation of Lexical Analysis
 
 ## Description
-When it comes to computational methods, the ability to comprehend and analyze languages is fundamental. In this evidence, we will delve into the development of a lexical analysis parser designed to accurately detect a specific language. The language in focus encompasses all possible combinations of the digits 0, 1, and 2, but it must adhere to a set of constraints, prohibiting certain sequences: '111', '222', '210', '221100', '110', and '000'. Therefore, recognizing patterns within languages and ensuring both efficient parsing and processing are crucial aspects of this understanding.
+When it comes to computational methods, the ability to comprehend and analyze languages is fundamental. In this evidence, we will delve into the development of a lexical analysis parser designed to accurately detect a specific language. The language in focus encompasses all possible combinations of the digits 0, 1, and 2, but it must adhere to a set of constraints, prohibiting certain sequences: '111', '222', '210', '221100', '110', and '000'. Therefore, recognizing patterns within languages and ensuring both efficient parsing as well as processing are crucial aspects of this understanding.
 
 To tackle the problem effectively, we chose to employ the concept of Deterministic Finite Automata (DFA), a mathematical model used to recognize languages. A DFA comprises five objects:
 
